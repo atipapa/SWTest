@@ -9,5 +9,8 @@
   <modules>
     <module>controller</module>
     <module>core</module>
+    <module>model</module>
+    <module>dao-file</module>
+    <module>service</module>
   </modules>
 </project>
