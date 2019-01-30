@@ -3,6 +3,10 @@
 	<name>dao-file</name>
 	<comment></comment>
 	<projects>
+		<project>bundle</project>
+		<project>controller</project>
+		<project>core</project>
+		<project>service</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

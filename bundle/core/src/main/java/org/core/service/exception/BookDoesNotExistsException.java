@@ -2,6 +2,11 @@ package org.core.service.exception;
 
 public class BookDoesNotExistsException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -7522942661557154724L;
+
 	public BookDoesNotExistsException(String message, Throwable cause, boolean enableSuppression,
 			boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);

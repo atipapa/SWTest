@@ -2,6 +2,11 @@ package org.core.service.exception;
 
 public class BookAlreadyExistsException extends Exception {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2612413881057217027L;
+
 	public BookAlreadyExistsException() {
 		super ();
 		// TODO Auto-generated constructor stub

@@ -3,6 +3,10 @@
 	<name>bundle</name>
 	<comment></comment>
 	<projects>
+		<project>controller</project>
+		<project>core</project>
+		<project>dao-file</project>
+		<project>service</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

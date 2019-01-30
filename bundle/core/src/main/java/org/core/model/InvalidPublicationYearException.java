@@ -2,6 +2,11 @@ package org.core.model;
 
 public class InvalidPublicationYearException extends Exception {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -2443542973420888415L;
+
 	public InvalidPublicationYearException() {
 		// TODO Auto-generated constructor stub
 	}
