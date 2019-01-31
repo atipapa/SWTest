@@ -70,6 +70,7 @@ public class BookFileDAO implements org.dao.BookDAO {
 	public void updateBook(BookDAO book) throws EntryNotFoundException {
 		
 	}
+	@SuppressWarnings("unlikely-arg-type")
 	public void deleteBook(BookDAO book) throws EntryNotFoundException {
 		Collection<org.core.model.Book> books = readBooks();
 		if (books.contains(book) == false) {

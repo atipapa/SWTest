@@ -50,7 +50,7 @@ class BookTest {
 		int actual = book.getID();
 		Assert.assertEquals(expected, actual);
 	}
-	@Test
+	@Test(expected = InvalidPublicationYearException.class)
 	public void testInvalidPublicationYear() throws InvalidPublicationYearException{
 	Book book = new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 0, 123456);
 	}

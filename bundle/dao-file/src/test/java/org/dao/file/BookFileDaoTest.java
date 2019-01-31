@@ -53,7 +53,7 @@ class BookFileDaoTest {
 	@Test
 	public void testReadBooksFromDefaultDB() throws InvalidPublicationYearException {
 		List<Book> expected = Arrays.asList(
-				new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456),
+				new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 1945, 123456),
 				new Book(BookModel.A_HALOTTAK_ELEN, "Ady Endre", 1918, 123789));
 		Collection<Book> actual = dao.readBooks();
 		Assert.assertEquals(expected.size(), actual.size());
@@ -61,6 +61,7 @@ class BookFileDaoTest {
 			Assert.assertTrue(actual.contains(book));
 		}
 		
+	
 	}
 
 }
