@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import org.core.model.Book;
 import org.dao.exception.DuplicatedBookEntryException;
-import org.dao.exception.EntryNotFoundExpcetion;
+import org.dao.exception.EntryNotFoundException;
 
 
 /**
@@ -21,7 +21,7 @@ void createBook(Book book) throws DuplicatedBookEntryException;
 	
 	Collection<Book> readBooks();
 	
-	void updateBook(Book book) throws EntryNotFoundExpcetion;
-	void deleteBook(Book book) throws EntryNotFoundExpcetion;
+	void updateBook(Book book) throws EntryNotFoundException;
+	void deleteBook(Book book) throws EntryNotFoundException;
 
 }

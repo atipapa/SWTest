@@ -11,7 +11,7 @@ import org.core.service.exception.BookAlreadyExistsException;
 import org.core.service.exception.BookDoesNotExistsException;
 import org.dao.BookDAO;
 import org.dao.exception.DuplicatedBookEntryException;
-import org.dao.exception.EntryNotFoundExpcetion;
+import org.dao.exception.EntryNotFoundException;
 
 public class BookManagerServiceImpl implements BookManagerService{
 	
@@ -39,7 +39,7 @@ public class BookManagerServiceImpl implements BookManagerService{
 	public void updateBook(Book book) throws BookDoesNotExistsException {
 		try {
 			bookDAO.updateBook(book);
-		} catch (EntryNotFoundExpcetion e) {
+		} catch (EntryNotFoundException e) {
 			throw new BookDoesNotExistsException(e);
 			// TODO: handle exception
 		}

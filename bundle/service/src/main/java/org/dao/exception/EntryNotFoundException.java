@@ -1,34 +1,34 @@
 package org.dao.exception;
 
-public class EntryNotFoundExpcetion extends Exception{
+public class EntryNotFoundException extends Exception{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -4807089964794548661L;
 
-	public EntryNotFoundExpcetion(String message, Throwable cause, boolean enableSuppression,
+	public EntryNotFoundException(String message, Throwable cause, boolean enableSuppression,
 			boolean writableStackTrace) {
 		super(message, cause, enableSuppression, writableStackTrace);
 		// TODO Auto-generated constructor stub
 	}
 
-	public EntryNotFoundExpcetion(String message, Throwable cause) {
+	public EntryNotFoundException(String message, Throwable cause) {
 		super(message, cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public EntryNotFoundExpcetion(String message) {
+	public EntryNotFoundException(String message) {
 		super(message);
 		// TODO Auto-generated constructor stub
 	}
 
-	public EntryNotFoundExpcetion(Throwable cause) {
+	public EntryNotFoundException(Throwable cause) {
 		super(cause);
 		// TODO Auto-generated constructor stub
 	}
 
-	public EntryNotFoundExpcetion() {
+	public EntryNotFoundException() {
 		// TODO Auto-generated constructor stub
 	}
 

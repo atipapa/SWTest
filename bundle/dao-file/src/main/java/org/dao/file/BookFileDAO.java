@@ -14,7 +14,7 @@ import org.core.model.InvalidPublicationYearException;
 import org.core.model.Publisher;
 import org.dao.BookDAO;
 import org.dao.exception.DuplicatedBookEntryException;
-import org.dao.exception.EntryNotFoundExpcetion;
+import org.dao.exception.EntryNotFoundException;
 
 
 public class BookFileDAO implements org.dao.BookDAO {
@@ -67,13 +67,13 @@ public class BookFileDAO implements org.dao.BookDAO {
 	return result;
 	}
 	
-	public void updateBook(BookDAO book) throws EntryNotFoundExpcetion {
+	public void updateBook(BookDAO book) throws EntryNotFoundException {
 		
 	}
-	public void deleteBook(BookDAO book) throws EntryNotFoundExpcetion {
+	public void deleteBook(BookDAO book) throws EntryNotFoundException {
 		Collection<org.core.model.Book> books = readBooks();
 		if (books.contains(book) == false) {
-			throw new EntryNotFoundExpcetion(book.toString());
+			throw new EntryNotFoundException(book.toString());
 		}
 		books.remove(book);
 		overrideDatabase(books);
@@ -102,13 +102,13 @@ public class BookFileDAO implements org.dao.BookDAO {
 	}
 
 	@Override
-	public void updateBook(org.core.model.Book book) throws EntryNotFoundExpcetion {
+	public void updateBook(org.core.model.Book book) throws EntryNotFoundException {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void deleteBook(org.core.model.Book book) throws EntryNotFoundExpcetion {
+	public void deleteBook(org.core.model.Book book) throws EntryNotFoundException {
 		// TODO Auto-generated method stub
 		
 	}
