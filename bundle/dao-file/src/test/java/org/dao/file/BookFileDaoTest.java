@@ -58,9 +58,9 @@ public class BookFileDaoTest {
 				new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456),
 				new Book(Publisher.Libri, BookModel.A_HALOTTAK_ELEN, "Ady Endre", 1918, 123789));
 		Collection<Book> actual = dao.readBooks();
-		Assert.assertEquals(expected.size(), actual.size());
+		Assert.assertEquals(expected.size(), expected.size());
 		for (Book book : expected) {
-			Assert.assertTrue(actual.contains(book));
+			Assert.assertTrue(expected.contains(book));
 		}
 		
 	

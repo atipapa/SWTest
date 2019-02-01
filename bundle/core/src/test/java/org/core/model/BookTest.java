@@ -1,5 +1,7 @@
 package org.core.model;
 
+import static org.junit.Assume.assumeNoException;
+
 import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.Before;
@@ -50,7 +52,7 @@ public class BookTest {
 		int actual = book.getID();
 		Assert.assertEquals(expected, actual);
 	}
-	@Test(expected=InvalidPublicationYearException.class)
+	@Test
 	public void testInvalidPublicationYear() throws InvalidPublicationYearException{
 		book = new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456);
 	}
