@@ -11,7 +11,7 @@ public class Book {
 	public Book(BookModel model, String writer, int publicationYear, int ID)
 throws InvalidPublicationYearException{
 		super();
-		if(publicationYear < 1980) {
+		if(publicationYear < 1800) {
 			throw new InvalidPublicationYearException();
 		}
 		this.model = model;

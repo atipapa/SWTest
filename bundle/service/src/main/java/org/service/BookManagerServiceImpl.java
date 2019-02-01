@@ -23,7 +23,6 @@ public class BookManagerServiceImpl implements BookManagerService{
 		// TODO Auto-generated constructor stub
 	}
 
-	@Override
 	public void recordBook(Book book) throws BookAlreadyExistsException {
 		try {
 			bookDAO.createBook(book);
@@ -35,7 +34,6 @@ public class BookManagerServiceImpl implements BookManagerService{
 		
 	}
 
-	@Override
 	public void updateBook(Book book) throws BookDoesNotExistsException {
 		try {
 			bookDAO.updateBook(book);
@@ -47,13 +45,11 @@ public class BookManagerServiceImpl implements BookManagerService{
 		
 	}
 
-	@Override
 	public Collection<Book> listBooks() {
 		// TODO Auto-generated method stub
 		return bookDAO.readBooks();
 	}
 
-	@Override
 	public Collection<Book> listBooksByPublisher(Publisher publisher) {
 		Set<Book> result = new HashSet<Book>();
 		for (Book book : listBooks()) {

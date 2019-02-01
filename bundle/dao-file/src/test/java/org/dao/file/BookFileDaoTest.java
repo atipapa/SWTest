@@ -14,13 +14,12 @@ import org.core.model.Book;
 import org.core.model.BookModel;
 import org.core.model.InvalidPublicationYearException;
 import org.dao.BookDAO;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import junit.framework.Assert;
-
-class BookFileDaoTest {
+public class BookFileDaoTest {
 	private static File DEFAULT_DB_STATE;
 	
 	private File temporalDB;
