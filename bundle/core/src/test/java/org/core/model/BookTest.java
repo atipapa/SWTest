@@ -15,7 +15,7 @@ public class BookTest {
 	@Before
 	public void setUp() {
 	try {
-		this.book = new Book(BookModel.JANOS_VITEZ, JANOS_VITEZ_WRITER, 1845, 123456);
+		this.book = new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, JANOS_VITEZ_WRITER, 1845, 123456);
 	} catch (InvalidPublicationYearException e) {
 		Assume.assumeNoException(e);
 	}
@@ -52,6 +52,6 @@ public class BookTest {
 	}
 	@Test(expected=InvalidPublicationYearException.class)
 	public void testInvalidPublicationYear() throws InvalidPublicationYearException{
-	Book book = new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 1885, 123456);
+		book = new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456);
 	}
 }

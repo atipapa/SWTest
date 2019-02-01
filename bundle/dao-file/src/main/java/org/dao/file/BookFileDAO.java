@@ -57,7 +57,7 @@ public class BookFileDAO implements BookDAO {
 				String writer = fields[2];
 				int publicationYear = Integer.parseInt(fields[3]);
 				int ID = Integer.parseInt(fields[4]);
-				result.add(new Book(model, writer, publicationYear, ID));
+				result.add(new Book(publisher, model, writer, publicationYear, ID));
 			}
 			} 
 		catch (IOException e) {

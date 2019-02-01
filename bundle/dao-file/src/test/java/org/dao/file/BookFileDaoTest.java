@@ -14,6 +14,7 @@ import java.util.List;
 import org.core.model.Book;
 import org.core.model.BookModel;
 import org.core.model.InvalidPublicationYearException;
+import org.core.model.Publisher;
 import org.dao.BookDAO;
 
 import org.junit.Assert;
@@ -54,8 +55,8 @@ public class BookFileDaoTest {
 	@Test
 	public void testReadBooksFromDefaultDB() throws InvalidPublicationYearException {
 		List<Book> expected = Arrays.asList(
-				new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456),
-				new Book(BookModel.A_HALOTTAK_ELEN, "Ady Endre", 1918, 123789));
+				new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456),
+				new Book(Publisher.Libri, BookModel.A_HALOTTAK_ELEN, "Ady Endre", 1918, 123789));
 		Collection<Book> actual = dao.readBooks();
 		Assert.assertEquals(expected.size(), actual.size());
 		for (Book book : expected) {

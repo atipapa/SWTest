@@ -1,7 +1,5 @@
 package org.core.model;
 
-import jdk.nashorn.internal.ir.ThrowNode;
-
 public class Book {
 	
 	private Publisher publisher;
@@ -10,10 +8,10 @@ public class Book {
 	private int publicationYear;
 	private int ID;
 	
-	public Book(BookModel model, String writer, int publicationYear, int ID)
+	public Book(Publisher publisher, BookModel model, String writer, int publicationYear, int ID)
 throws InvalidPublicationYearException{
 		super();
-		if(publicationYear < 1800) {
+		if(publicationYear < 1810) {
 			throw new InvalidPublicationYearException();
 		}
 		this.model = model;
