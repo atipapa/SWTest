@@ -52,6 +52,6 @@ public class BookTest {
 	}
 	@Test(expected=InvalidPublicationYearException.class)
 	public void testInvalidPublicationYear() throws InvalidPublicationYearException{
-	Book book = new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456);
+	Book book = new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 1885, 123456);
 	}
 }

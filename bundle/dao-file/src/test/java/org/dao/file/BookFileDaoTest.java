@@ -10,10 +10,12 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
+
 import org.core.model.Book;
 import org.core.model.BookModel;
 import org.core.model.InvalidPublicationYearException;
 import org.dao.BookDAO;
+
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -31,7 +33,7 @@ public class BookFileDaoTest {
 	}
 	@Before
 	public void setUp() throws IOException{
-		temporalDB = File.createTempFile("carDB", "csv");
+		temporalDB = File.createTempFile("bookDB", "csv");
 		InputStream is = null;
 		OutputStream os = null;
 		try {
@@ -52,7 +54,7 @@ public class BookFileDaoTest {
 	@Test
 	public void testReadBooksFromDefaultDB() throws InvalidPublicationYearException {
 		List<Book> expected = Arrays.asList(
-				new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 1945, 123456),
+				new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456),
 				new Book(BookModel.A_HALOTTAK_ELEN, "Ady Endre", 1918, 123789));
 		Collection<Book> actual = dao.readBooks();
 		Assert.assertEquals(expected.size(), actual.size());
