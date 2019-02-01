@@ -1,12 +1,10 @@
 package org.core.model;
 
-import static org.junit.Assume.assumeNoException;
-
-import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
 
+import junit.framework.Assert;
 
 public class BookTest {
 
@@ -35,7 +33,7 @@ public class BookTest {
 		Assert.assertEquals(expected, actual);
 	}
 	@Test
-	public void testWriterWithPetofiSandor() {
+	public void testwriterWithPetofiSandor() {
 		String expected = JANOS_VITEZ_WRITER;
 		String actual = book.getWriter();
 		Assert.assertEquals(expected, actual);
@@ -47,13 +45,13 @@ public class BookTest {
 		Assert.assertEquals(expected, actual);
 	}
 	@Test
-	public void testIDWithPetofiSandor () {
+	public void testIDwithPetofiSandor () {
 		int expected = 123456;
 		int actual = book.getID();
 		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void testInvalidPublicationYear() throws InvalidPublicationYearException{
-		book = new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456);
+	book = new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456);
 	}
 }
