@@ -19,7 +19,7 @@ public class BookManagerServiceImpl implements BookManagerService{
 
 	public BookManagerServiceImpl() {
 		super ();
-		this.bookDAO = bookDAO;
+		
 		// TODO Auto-generated constructor stub
 	}
 

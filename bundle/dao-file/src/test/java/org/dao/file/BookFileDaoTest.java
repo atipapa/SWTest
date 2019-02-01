@@ -16,7 +16,7 @@ import org.core.model.InvalidPublicationYearException;
 import org.dao.BookDAO;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import junit.framework.Assert;
 

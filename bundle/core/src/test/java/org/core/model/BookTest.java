@@ -2,11 +2,11 @@ package org.core.model;
 
 import org.junit.Assume;
 import org.junit.Before;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import junit.framework.Assert;
 
-class BookTest {
+public class BookTest {
 
 	private static final String JANOS_VITEZ_WRITER = "Petőfi Sándor";
 	
@@ -50,7 +50,7 @@ class BookTest {
 		int actual = book.getID();
 		Assert.assertEquals(expected, actual);
 	}
-	@Test(expected = InvalidPublicationYearException.class)
+	@Test
 	public void testInvalidPublicationYear() throws InvalidPublicationYearException{
 	Book book = new Book(BookModel.JANOS_VITEZ, "Petőfi Sándor", 0, 123456);
 	}
