@@ -17,10 +17,11 @@ import org.core.model.InvalidPublicationYearException;
 import org.core.model.Publisher;
 import org.dao.BookDAO;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
+import org.junit.Assert;
 
 public class BookFileDaoTest {
 	private static File DEFAULT_DB_STATE;
@@ -58,12 +59,11 @@ public class BookFileDaoTest {
 				new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456),
 				new Book(Publisher.Libri, BookModel.A_HALOTTAK_ELEN, "Ady Endre", 1918, 123789));
 		Collection<Book> actual = dao.readBooks();
-		Assert.assertEquals(expected.size(), expected.size());
+		Assert.assertEquals(expected.size(), actual.size());
 		for (Book book : expected) {
-			Assert.assertTrue(expected.contains(book));
-		}
+			Assert.assertTrue(actual.contains(book));
 		
-	
+		}
 	}
 
 }
