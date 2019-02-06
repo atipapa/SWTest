@@ -8,33 +8,33 @@ import org.junit.Test;
 
 public class BookTest {
 
-	private static final String JANOS_VITEZ_WRITER = "Petőfi Sándor";
+	private static final String JANOSVITEZWRITER = "Petőfi Sándor";
 	
 	private Book book;
 	
 	@Before
 	public void setUp() {
 	try {
-		this.book = new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, JANOS_VITEZ_WRITER, 1845, 123456);
+		this.book = new Book(Publisher.MUSZAKI, BookModel.JANOSVITEZ, JANOSVITEZWRITER, 1845, 123456);
 	} catch (InvalidPublicationYearException e) {
 		Assume.assumeNoException(e);
 	}
 	}
 	@Test
 	public void testPublisherWithPetofiSandor() {
-		Publisher expected = Publisher.Muszaki;
+		Publisher expected = Publisher.MUSZAKI;
 		Publisher actual = book.getPublisher();
 		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void testModelWithPetofiSandor() {
-		BookModel expected = BookModel.JANOS_VITEZ;
+		BookModel expected = BookModel.JANOSVITEZ;
 		BookModel actual = book.getModel();
 		Assert.assertEquals(expected, actual);
 	}
 	@Test
 	public void testwriterWithPetofiSandor() {
-		String expected = JANOS_VITEZ_WRITER;
+		String expected = JANOSVITEZWRITER;
 		String actual = book.getWriter();
 		Assert.assertEquals(expected, actual);
 	}
@@ -52,6 +52,6 @@ public class BookTest {
 	}
 	@Test
 	public void testInvalidPublicationYear() throws InvalidPublicationYearException{
-	book = new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456);
+	book = new Book(Publisher.MUSZAKI, BookModel.JANOSVITEZ, "Petőfi Sándor", 1845, 123456);
 	}
 }

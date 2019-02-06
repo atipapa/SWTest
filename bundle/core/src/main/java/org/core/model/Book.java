@@ -11,12 +11,12 @@ public class Book {
 	public Book(Publisher publisher, BookModel model, String writer, int publicationYear, int ID)
 throws InvalidPublicationYearException{
 		super();
-		int i = 1810;
+		int i = 1800;
 		if(publicationYear < i) {
 			throw new InvalidPublicationYearException();
 		}
-		this.model = model;
 		this.publisher = model.getPublisher();
+		this.model = model;
 		this.writer = writer;
 		this.publicationYear = publicationYear;
 		this.ID = ID;

@@ -1,8 +1,8 @@
 package org.core.model;
 
 public enum BookModel {
-	A_HALOTTAK_ELEN(Publisher.Libri),
-	JANOS_VITEZ(Publisher.Muszaki);
+	AHALOTTAKELEN(Publisher.LIBRI),
+	JANOSVITEZ(Publisher.MUSZAKI);
 	
 	private final Publisher publisher;
 	
