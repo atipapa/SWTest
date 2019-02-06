@@ -1,6 +1,7 @@
 package org.core.model;
 
 
+import org.junit.Assert;
 import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,7 +20,7 @@ public class BookTest {
 		Assume.assumeNoException(e);
 	}
 	}
-	/*@Test
+	@Test
 	public void testPublisherWithPetofiSandor() {
 		Publisher expected = Publisher.Muszaki;
 		Publisher actual = book.getPublisher();
@@ -48,7 +49,7 @@ public class BookTest {
 		int expected = 123456;
 		int actual = book.getID();
 		Assert.assertEquals(expected, actual);
-	}*/
+	}
 	@Test
 	public void testInvalidPublicationYear() throws InvalidPublicationYearException{
 	book = new Book(Publisher.Muszaki, BookModel.JANOS_VITEZ, "Petőfi Sándor", 1845, 123456);

@@ -10,18 +10,15 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
-
 import org.core.model.Book;
 import org.core.model.BookModel;
 import org.core.model.InvalidPublicationYearException;
 import org.core.model.Publisher;
 import org.dao.BookDAO;
-
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-
-import org.junit.Assert;
 
 public class BookFileDaoTest {
 	private static File DEFAULT_DB_STATE;
